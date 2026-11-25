@@ -1,0 +1,50 @@
+/* Variabel warna utama */
+:root{--green:#00b14f;--dark:#1f2937;--gray:#6b7280;--light:#f9fafb;--white:#fff;--border:#e5e7eb}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--dark);background:var(--light);line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Header tetap di atas saat di-scroll */
+.site-header{background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1100px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;font-size:1.3rem;font-weight:800;color:var(--green)}
+.brand-icon-img{width:40px;height:40px;border-radius:10px;object-fit:cover}
+.brand small{display:block;font-size:.62rem;font-weight:500;color:var(--gray)}
+.main-nav{display:flex;gap:.25rem;flex-wrap:wrap}
+.main-nav a{padding:.5rem 0;margin:0 .8rem;font-size:.85rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);border-bottom:2px solid transparent}
+.main-nav a:hover,.main-nav a.active{color:var(--dark);border-bottom-color:var(--dark)}
+
+/* Wadah untuk gambar hero (banner) */
+.hero{max-width:1100px;margin:2rem auto 1rem;padding:0 1.5rem}
+.hero-card{position:relative;border-radius:12px;overflow:hidden;height:400px;background:var(--dark)}
+.hero-card img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent 65%);display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;color:#fff}
+
+/* Wadah konten utama */
+.page-content{max-width:900px;margin:0 auto;padding:1rem 1.5rem 4rem}
+.page-title{font-size:1.9rem;font-weight:800;text-align:center;margin-bottom:.4rem}
+.page-subtitle{text-align:center;color:var(--gray);margin-bottom:2rem}
+.article-body p{margin-bottom:1.1rem;color:#374151;text-align:justify}
+.article-body strong{color:#009140}
+
+/* Grid untuk kartu kontak */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.contact-item{background:var(--white);border-radius:12px;padding:1.2rem;border:1px solid var(--border);text-align:center}
+.contact-item .icon{width:46px;height:46px;margin:0 auto .6rem;border-radius:50%;background:#e6f7ee;display:grid;place-items:center}
+
+/* Wadah tabel agar bisa di-scroll di layar kecil */
+.table-container{overflow-x:auto;margin-top:1rem}
+.member-table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--white)}
+.member-table th,.member-table td{padding:.8rem 1rem;border:1px solid #47524b;text-align:left;vertical-align:top}
+.member-table th{background:#65f078;color:var(--dark);font-weight:700}
+.member-table td{color:#374151}
+.member-table ul{padding-left:1.2rem;margin-top:0.5rem;margin-bottom:0}
+.member-table ul li{margin-bottom:0.4rem;color:#374151;font-size:0.95rem}
+
+/* tata letak footer */
+.site-footer{background:var(--dark);padding:1.5rem;text-align:center}
+.footer-bottom{font-size:.9rem;color:#9ca3af}
+
+/* Pengaturan tampilan untuk layar HP/Tablet */
+@media(max-width:768px){.hero-card{height:240px}.hero-overlay{padding:1rem 1.5rem}.hero-overlay h1{font-size:1.2rem}.hero-overlay p{display:none}.page-title{font-size:1.5rem}.brand small{display:none}}
